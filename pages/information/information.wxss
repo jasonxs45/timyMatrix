@@ -1,0 +1,62 @@
+page{
+  background:#f2f2f2;
+}
+.information{
+	background:#f2f2f2;
+}
+.information .panel{
+	margin-bottom:20rpx;
+	background: #fff;
+	padding:10rpx 30rpx;
+	border-radius:4px;
+	box-shadow:0 0 6rpx 0 rgba(0,0,0,.1);
+}
+.name{
+	display:block;
+	font-size:50rpx;
+	font-weight:600;
+	line-height:1;
+	margin-bottom:20rpx;
+	margin-top:20rpx;
+}
+.panel .fr{
+	font-size:32rpx;
+	padding:30rpx;
+	margin-left:-25rpx;
+	margin-right:-25rpx;
+	border-bottom: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #d7dde4), to(#d7dde4));
+  background-image: linear-gradient(to bottom, transparent 50%, #d7dde4 50%, #d7dde4 100%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.panel>.fr:last-child{
+	background:none;
+}
+.information .fh{
+	font-weight:200;
+	width:20%;
+}
+.tel{
+	color:#1aad19;
+}
+.others{
+	border:1px solid #ddd;
+	border-radius:4px;
+	padding:16rpx;
+	font-size:32rpx;
+	min-height:100rpx;
+  margin-top: -8rpx;
+}
+.avatar{
+	width:120rpx;
+	height:120rpx;
+	position: absolute;
+	top:40rpx;
+	right:40rpx;
+	border-radius:4px;
+}
+button{
+  font-size:32rpx;
+}

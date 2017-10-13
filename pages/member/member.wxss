@@ -1,0 +1,135 @@
+.tabbar{
+	position: fixed;
+	z-index:10;
+	height:100rpx;
+	width:100%;
+	left:0;
+	background: #fff;
+}
+.tabbar navigator{
+	display:table-cell;
+	width:1%;
+	height:100rpx;
+	text-align:center;
+	font-size:0;
+}
+.tabbar navigator image{
+	display:inline-block;
+	width:60rpx;
+	height:60rpx;
+	vertical-align:top;
+	line-height:100rpx;
+	margin-top:20rpx;
+	margin-right:10rpx;
+}
+.tabbar navigator text{
+	display:inline-block;
+	vertical-align:top;
+	line-height:60rpx;
+	font-size:30rpx;
+	margin-top:20rpx;
+	color:#1aad19;
+}
+.tabbar.bottom{
+	bottom:0;
+	box-shadow: 0 0 20rpx 0 rgba(0,0,0,.2)
+}
+.tabbar.bottom + .member-list{
+	padding-bottom:100rpx;
+}
+.tabbar.top{
+	top:0;
+	left:0;
+	box-shadow: 0 0 20rpx 0 rgba(0,0,0,.2)
+}
+.tabbar.top + .member-list{
+	padding-top:100rpx;
+}
+.searchbar{
+  padding:10rpx 20rpx;
+  background:#eee;
+}
+.searchbar label{
+  display:block;
+  border:1rpx solid #eee;
+  width:100%;
+  height:70rpx;
+  border-radius:4px;
+  position:relative;
+  background:#fff;
+}
+.searchbar label input{
+  height:100%;
+  color:#888;
+  font-size:30rpx;
+  padding:0 10rpx 0 50rpx;
+}
+.searchbar label .search-btn{
+  position: absolute;
+  width:100rpx;
+  height:70rpx;
+  text-align: center;
+  top:0;
+  right:0;
+}
+.searchbar label icon[type="search"]{
+  position:absolute;
+  top:50%;
+  margin-top:-6px;
+  left:6px;
+}
+.member-list{
+	padding:0;
+	background:#f2f2f2;
+}
+.again{
+  font-size:32rpx;
+  width:600rpx;
+  margin-top:40rpx;
+}
+.item-title{
+	display:block;
+	background:#ddd;
+	font-size:22rpx;
+	padding:12rpx;
+	color:#888;
+}
+.item-title.sub{
+  background:#eee;
+  color:#888;
+  font-size:20rpx;
+}
+.item{
+	display:-webkit-box;
+	padding:20rpx;
+	position:relative;
+	background:#fff;
+	margin:20rpx 0 0;
+}
+.item-group .item.mt0{
+	margin-top:0;
+}
+.userinfo-avatar{
+	width:100rpx;
+	height:100rpx;
+	display:block;
+	margin-right:20rpx;
+  border-radius:4px;
+}
+.content{
+	overflow:hidden;
+	-webkit-box-flex:1;
+}
+.name,
+.info{
+	display:block;
+	font-size:28rpx;
+}
+.name{
+	font-size:32rpx;
+}
+.info{
+	margin-top:40rpx;
+	display:inline-block;
+	color:#666;
+}

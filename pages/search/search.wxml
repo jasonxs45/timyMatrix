@@ -1,0 +1,15 @@
+<label class="searchbar">
+  <input type='text' focus="true" confirm-type='search' placeholder='请输入姓名或者电话查找' value="{{inputVal}}" bindconfirm="search" bindinput="inputHandler"></input>
+  <icon type="search" size="12"></icon>
+  <text class="cancel" bindtap='cancalHandler'>取消</text>
+</label>
+<view class="search-wrapper">
+  <view class="nodata" wx:if="{{inputVal&&list.length===0}}">暂时查找不到，请输入有效检索信息</view>
+  <view wx:for="{{list}}" wx:for-item="member" wx:for-index="idx" wx:key="member-{{idx}}" class="{{idx===0?'item border1px mt0':'item border1px'}}" bindtap="memberDetail" data-indexmap="{{member.Id}}">
+        <image class="userinfo-avatar" src="{{member.AvatarUrl?member.AvatarUrl:'../../images/matrix.png'}}" background-size="cover"></image>
+        <view class="content">
+          <text class="name">{{member.Name}}</text>
+          <text class="info" catchtap="phoneCall" data-telnum="{{member.Phone}}">联系电话：{{member.Phone}}</text>
+        </view>
+      </view>
+</view>

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="entry" wx:for="{{menus}}" wx:for-item="menu" wx:for-index="idx" wx:key="entry-{{index}}" bindtap="navTo" data-url="{{menu.path}}">
+    <image src="{{menu.src}}" class="icon" mode="aspectFit"></image>
+    <view class="content">
+      <text class="title">{{menu.name}}</text>
+      <text class="desc">{{menu.desc}}</text>
+    </view>
+    <image src="../../images/right.png" class="right-arrow" mode="aspectFit"></image>
+  </view>
+</view>
+<view class="bindTel" wx:if="{{alreadyBind != 1}}">
+  <text class="tip">使用之前，需要绑定您注册微信的手机号码</text>
+  <button open-type="getPhoneNumber" type='primary' class="bind" bindgetphonenumber="getPhoneNumber">同意绑定</button>
+</view>

@@ -1,0 +1,31 @@
+<view class="tabbar">
+  <view wx:for="{{floors}}" wx:key="floor-{{index}}" class="tab {{active==index?'active':''}}" bindtap='changeTab' data-idx="{{index}}">
+    <text>#{{item.floor}}</text>
+  </view>
+</view>
+<view class="title">当前持有者:</view>
+<view class="tips">
+  <text>人员信息不准确？领取前请</text>
+  <text class="refresh" bindtap='getCurrent'>刷新一下！</text>
+</view>
+<swiper current='{{active}}' bindchange='swipeChangeHandler'>
+  <swiper-item wx:for="{{floors}}" wx:key="swipe-item-{{index}}">
+    <image class="avatar" src="{{person.AvatarUrl?person.AvatarUrl:'../../images/matrix.png'}}"></image>
+    <view class="nickname">{{person.NickName}}</view>
+    <view class="name">{{person.Name}}</view>
+    <view class="unit">部门：{{person.BusinessUnitName}}</view>
+    <view class="group">分组：{{person.BusinessGroupName}}</view>
+    <view class="time">领取时间：{{person.GetKeyTime}}</view>
+  </swiper-item>
+</swiper>
+<view class="btn" bindtap='getKey'>领取钥匙</view>
+<view class="gorule">
+  <view bindtap="toggleRule">
+    <image src="../../images/help.png"></image>
+    <text>管理办法</text>
+  </view>
+</view>
+<view class="rules {{showing?'showing':''}}" hidden='{{!showRule}}'>
+  <rich-text nodes="{{nodes}}"></rich-text>
+  <icon type='cancel' color="#fff" size='30' class="close" bindtap='toggleRule'></icon>
+</view>

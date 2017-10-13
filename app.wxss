@@ -1,0 +1,39 @@
+/**app.wxss**/
+page,view,image,label,input,icon{
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+  line-height:1;
+}
+text{
+  line-height:1;
+  word-break:break-all;
+}
+.container {
+  padding: 20rpx;
+}
+.border1px{
+  border-bottom: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #d7dde4), to(#d7dde4));
+  background-image: linear-gradient(to bottom, transparent 50%, #d7dde4 50%, #d7dde4 100%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.fr{
+  display:-webkit-box;
+}
+.fh{
+  width:20%;
+  display:block;
+}
+.fb{
+  -webkit-box-flex:1;
+  display:block;
+}
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}

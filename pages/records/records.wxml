@@ -1,0 +1,38 @@
+<view class="title">
+  <text>{{month}}</text>
+  <text>月</text>
+</view>
+<view class="calendar">
+  <view class="weekName">
+    <view wx:for="{{dayText}}" wx:key="daytext-{{index}}" wx:for-item="daytext" class="{{index==0||index==dayText.length-1?'weekend':''}}">
+      {{daytext}}
+    </view>
+  </view>
+  <view class="week">
+    <!--填补空格-->
+    <view wx:for="{{nbsp}}" wx:key="nbsp-{{index}}">\n</view>
+    <!--开心循环日期-->
+    <view wx:for="{{monthDaySize}}" wx:key="date-{{index}}" class="{{active==index?'active':''}} {{index==date-1?'today':index<date-1?'passed':''}} {{records[index].status}}" bindtap="selectDate" data-idx="{{index}}">
+      <text>{{item+1}}</text>
+    </view>
+  </view>
+</view>
+<view class="info">
+  <view class="title">
+    <view class="line border1px"></view>
+    <view class="text">{{active==null?date:active+1}}日</view>
+    <view class="line border1px"></view>
+  </view>
+  <view class="detail">
+    <view class="detail-wrapper">
+      <view wx:for="{{todayRecord}}" wx:key="m-{{index}}" class="item">
+        <view class="noon">{{index==0?'上':'下'}}午</view>
+        <view class="time">{{item.time?item.time:'无记录'}}</view>
+        <view class="status">
+          <icon color="{{item.yes==1?'#1fb822':'red'}}" type="{{item.yes==1?'success_no_circle':'cancel'}}"></icon>
+          <text style="color:{{item.yes==1?'#1fb822':'red'}}">{{item.yes==1?'正常':item.yes==0?'未打卡':index==0?'迟到':'早退'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

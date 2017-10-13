@@ -1,0 +1,40 @@
+<view class="container information">
+	<view class="wrapper">
+		<view class="panel panel1">
+			<text class="name">{{information.Name}}</text>
+			<image class="avatar" src="{{information.AvatarUrl?information.AvatarUrl:'../../images/matrix.png'}}" bindtap="previewAvatar"></image>
+			<view class="fr">
+				<text class="fh">昵称：</text><text class="fb nickname">{{information.NickName?information.NickName:'未知'}}</text>
+			</view>
+			<view class="fr">
+				<text class="fh">电话：</text><text class="fb tel" bindtap="phoneCall" data-telnum="{{information.Phone}}">{{information.Phone}}</text>
+			</view>
+			<view class="fr">
+				<text class="fh">性别：</text><text class="fb gender">{{information.Sex == 1?'男':'女'}}</text>
+			</view>
+		</view>
+		<view class="panel panel2">
+			<view class="fr">
+				<text class="fh">部门：</text><text class="fb department">{{information.BusinessUnitName}}</text>
+			</view>
+      <view class="fr">
+				<text class="fh">分组：</text><text class="fb department">{{information.BusinessGroupName}}</text>
+			</view>
+			<view class="fr">
+				<text class="fh">职务：</text><text class="fb job">{{information.CompanyPosition}}</text>
+			</view>
+			<view class="fr">
+				<text class="fh">QQ：</text><text class="fb qq">{{information.QQ?information.QQ:'未知'}}</text>
+			</view>
+			<view class="fr">
+				<text class="fh">Email：</text><text class="fb email">{{information.Email}}</text>
+			</view>
+		</view>
+		<view class="panel">
+			<view class="fr">
+				<text class="fh">备注：</text><textarea class="fb others" readonly auto-height value="{{information.Describe?information.Describe:'暂无'}}"></textarea>
+			</view>
+		</view>
+    <button size="default" bindtap="backHandler">返回</button>
+	</view>
+</view>

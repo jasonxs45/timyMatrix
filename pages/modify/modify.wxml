@@ -1,0 +1,53 @@
+<view class="container modify">
+  <view class="wrapper">
+    <view class="panel panel1">
+      <view class="fr">
+        <text class="fh">姓名：</text>
+        <input class="fb name" placeholder="请输入您的姓名"></input>
+      </view>
+      <view class="fr">
+        <text class="fh">昵称：</text>
+        <input class="fb nickname" placeholder='请输入您的昵称'></input>
+      </view>
+      <view class="fr">
+        <text class="fh">电话：</text>
+        <input class="fb tel" type="number" placeholder='请输入您的电话'></input>
+      </view>
+      <view class="fr">
+        <text class="fh">性别：</text>
+        <view class="fb gender">
+          <radio-group>
+            <radio>男</radio>
+            <radio>女</radio>
+          </radio-group>
+        </view>
+      </view>
+    </view>
+    <view class="panel panel2">
+      <view class="fr">
+        <text class="fh">部门：</text>
+        <input class="fb department" placeholder='请填写您所在部门'></input>
+      </view>
+      <view class="fr">
+        <text class="fh">职务：</text>
+        <input class="fb job" placeholder='请填写您的职务'></input>
+      </view>
+      <view class="fr">
+        <text class="fh">QQ：</text>
+        <input class="fb qq" type="number" placeholder='请填写您的QQ号'></input>
+      </view>
+      <view class="fr">
+        <text class="fh">Email：</text>
+        <input class="fb email" placeholder='请填写您的Email'>{{information.icon}}</input>
+      </view>
+    </view>
+    <view class="panel">
+      <view class="fr">
+        <text class="fh">备注：</text>
+        <textarea class="fb others" auto-height value="{{wxInfo.avatarUrl}}"></textarea>
+      </view>
+    </view>
+    <button type="primary" size="default" bindtap="toModify">提交修改</button>
+    <button type="cancel" size="default" bindtap="toModify">取消</button>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<view class="title">现在时间</view>
+<view class="time">{{now}}</view>
+<view class="distance">
+  <text>距离：</text>
+  <text class="num">{{distance?distance+'米':'计算中。。。'}}</text>
+</view>
+<view class="locate">
+  <text>定位不准？</text>
+  <text class="relocate" bindtap='calculateDistance'>重新定位</text>
+</view>
+<button class="tap-area" bindtap='signInHandler'>
+  <button class="inner">
+    <text>我要打卡</text>
+    <image class="finger" src="../../images/finger.png" background-size="cover"></image>
+  </button>
+</button>
+<view class="btns">
+  <text class="pull-left btn showRule" bindtap='toggleRule'>规则说明</text>
+  <text class="pull-right btn showRecords" bindtap='myRecords'>考勤记录</text>
+</view>
+<view class="rules {{showing?'showing':''}}" hidden='{{!showRule}}'>
+  <rich-text nodes="{{nodes}}"></rich-text>
+  <icon type='cancel' color="#fff" size='30' class="close" bindtap='toggleRule'></icon>
+</view>

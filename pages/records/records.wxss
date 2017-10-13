@@ -1,0 +1,140 @@
+.title {
+  text-align: center;
+  padding: 20rpx;
+  font-size: 32rpx;
+}
+
+.calendar {
+  background: #eee;
+}
+
+.weekName {
+  width: 100%;
+  display: flex;
+  padding: 30rpx 0;
+  background:#ddd;
+}
+
+.weekName view {
+  flex: 1;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.weekName view.weekend {
+  color: #888;
+}
+
+.week {
+  margin-top: 20rpx;
+  width: 100%;
+}
+
+.week view {
+  width: 14.2%;
+  display: inline-block;
+  margin: 20rpx 0;
+  text-align: center;
+  vertical-align: top;
+  font-size: 32rpx;
+}
+
+.week view text {
+  display: inline-block;
+  /* border-radius:50%;
+  border:1px solid #ddd; */
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #333;
+  text-shadow: 1px 1px 4px rgba(0,0,0,.2);
+}
+
+.week view.today text {
+  border-bottom: 1px solid #1fb822;
+  background:none !important;
+}
+
+.week view.passed text {
+  color: #666;
+  border-radius: 50%;
+}
+
+.week view.active text {
+  background: #fa787a !important;
+  border-radius: 50%;
+  color: #fff;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  border-color: #fa787a;
+}
+.week view.am text {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #1fb822), color-stop(50%, #ddd), to(#ddd));
+  background: linear-gradient(to bottom, #1fb822 50%, #ddd 50%, #ddd 100%);
+  color:#fff;
+}
+.week view.pm text {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #1fb822), color-stop(50%, #ddd), to(#ddd));
+  background: linear-gradient(to top, #1fb822 50%, #ddd 50%, #ddd 100%);
+  color:#fff;
+}
+.week view.whole text{
+  background:#1fb822;
+  color:#fff;
+  border-color:#1fb822;
+}
+.week view.miss text{
+  background:#ddd;
+}
+
+.info .title {
+  display: flex;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  margin-top:20rpx;
+}
+
+.info .title .line {
+  -webkit-box-flex: 1;
+  flex: 1;
+  height: 1px;
+}
+
+.info .title .text {
+  margin: 0 40rpx;
+}
+
+.detail-wrapper {
+  display: flex;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+}
+
+.detail-wrapper .item {
+  width: 45%;
+  text-align: center;
+}
+.detail-wrapper .item .noon{
+  margin-top:40rpx;
+  color:#666;
+  font-size:32rpx;
+}
+.detail-wrapper .item .time{
+  color:#888;
+  font-size:46rpx;
+  font-weight: 500;
+  margin:60rpx 0;
+}
+
+.detail-wrapper .item .status {
+  font-size: 0;
+}
+.detail-wrapper .item .status text,
+.detail-wrapper .item .status icon{
+  display:inline-block;
+  vertical-align: middle;
+}
+.detail-wrapper .item .status text{
+  font-size:32rpx;
+  margin-left: 20rpx;
+}

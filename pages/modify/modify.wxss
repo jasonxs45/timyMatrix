@@ -1,0 +1,63 @@
+.modify{
+	background:#f2f2f2;
+}
+.modify .panel{
+	margin-bottom:20rpx;
+	background: #fff;
+	padding:10rpx 30rpx;
+	border-radius:4px;
+	box-shadow:0 0 6rpx 0 rgba(0,0,0,.1);
+}
+.panel .fr{
+	font-size:36rpx;
+	padding:30rpx;
+	margin-left:-25rpx;
+	margin-right:-25rpx;
+	border-bottom: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #d7dde4), to(#d7dde4));
+  background-image: linear-gradient(to bottom, transparent 50%, #d7dde4 50%, #d7dde4 100%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.panel>.fr:last-child{
+	background:none;
+}
+.modify .fh{
+	font-weight:200;
+	width:20%;
+  height:1.2rem;
+  line-height:1.2rem;
+}
+.modify input.fb{
+  height:1.2rem;
+  line-height:1.2rem;
+  min-height:1.2rem;
+}
+.modify .gender{}
+.modify .gender radio{
+  margin-right:20rpx;
+}
+.modify .gender .wx-radio-input{
+  width:36rpx;
+  height:36rpx;
+}
+.others{
+	border:1px solid #ddd;
+	border-radius:4px;
+	padding:16rpx;
+	font-size:36rpx;
+	height:100rpx;
+}
+.avatar{
+	width:120rpx;
+	height:120rpx;
+	position: absolute;
+	top:40rpx;
+	right:40rpx;
+	border-radius:4px;
+}
+button{
+  margin:40rpx 0;
+  font-size:36rpx;
+}

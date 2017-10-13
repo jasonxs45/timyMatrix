@@ -1,0 +1,22 @@
+<view class="searchbar">
+  <label class="search" bindtap='goSearch'>
+    <input placeholder="请输入姓名或者电话查找" type="text" confirm-type="search" disabled='true'></input>
+      <icon type="search" size="12"></icon>
+  </label>
+</view>
+<button class="again" type='primary' wx:if="{{queryed&&memberList.length==0}}" bindtap='getMemberList'>重新获取通讯录</button>
+<view class="container member-list">
+  <view wx:for="{{memberList}}" wx:for-item="unit" wx:key="unit-{{index}}" class="item-group">
+    <text class="item-title">{{unit.businessunitname}}</text>
+    <view wx:for="{{unit.businessgroupArr}}" wx:for-item="group"  wx:key="group-{{index}}">
+      <text class="item-title sub">{{group.BusinessGroupName}}</text>
+      <view wx:for="{{group.StaffList}}" wx:for-item="member" wx:for-index="idx" wx:key="member-{{idx}}" class="{{idx===0?'item border1px mt0':'item border1px'}}" bindtap="memberDetail" data-indexmap="{{member.Id}}">
+        <image class="userinfo-avatar" src="{{member.AvatarUrl?member.AvatarUrl:'../../images/matrix.png'}}" background-size="cover"></image>
+        <view class="content">
+          <text class="name">{{member.Name}}</text>
+          <text class="info" catchtap="phoneCall" data-telnum="{{member.Phone}}">联系电话：{{member.Phone}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
