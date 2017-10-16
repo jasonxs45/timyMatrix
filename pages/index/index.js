@@ -23,7 +23,7 @@ Page({
         desc: '公司群成员通讯录'
       }
     ],
-    alreadyBind: wx.getStorageSync('alreadyBind')
+    alreadyBind: null
   },
   //事件处理函数
   onLoad() {
@@ -38,6 +38,7 @@ Page({
       console.log('定义在index.js里面的 getBindReady事件')
       _self.setBindStatus()
     }
+    this.setBindStatus()
   },
   setBindStatus () {
     this.setData({
