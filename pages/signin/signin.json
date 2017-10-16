@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "打卡签到"
+  "navigationBarTitleText": "打卡签到",
+  "disableScroll": true
 }

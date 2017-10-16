@@ -21,6 +21,10 @@ Page({
     this.setData({
       nodes: NODES
     })
+    app.fingerReady = res => {
+      console.log(res)
+    }
+    console.log(app.globalData.fingerPrint)
   },
   runTime () {
     let _self = this

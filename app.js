@@ -20,6 +20,29 @@ App({
         _self.login()
       }
     })
+    this.checkFinger()
+  },
+  checkFinger () {
+    let _self = this
+    wx.checkIsSupportSoterAuthentication({
+      success(res) {
+        // res.supportMode = [] 不具备任何被SOTER支持的生物识别方式
+        // res.supportMode = ['fingerPrint'] 只支持指纹识别
+        // res.supportMode = ['fingerPrint', 'facial'] 支持指纹识别和人脸识别
+        if (res.supportMode === 0) {
+          wx.showToast({
+            title: '不支持生物识别'
+          })
+          _self.globalData.fingerPrint = 0
+        } else if (res.supportMode[0] === 'fingerPrint') {
+          wx.showToast({
+            title: '支持指纹'
+          })
+          _self.globalData.fingerPrint = 1
+        }
+        _self.fingerReady && _self.fingerReady(_self.globalData.fingerPrint)
+      }
+    })
   },
   login() {
     let _self = this
@@ -149,6 +172,7 @@ App({
   },
   globalData: {
     userInfo: null,
+    fingerPrint:null,
     shareConf: {
       title: '小工矩，矩阵互动小工具',
       path: '/pages/index/index',

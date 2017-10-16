@@ -39,6 +39,10 @@ Page({
       _self.setBindStatus()
     }
     this.setBindStatus()
+    console.log(app.globalData.fingerPrint)
+  },
+  onShow () {
+    console.log(app.globalData.fingerPrint)
   },
   setBindStatus () {
     this.setData({

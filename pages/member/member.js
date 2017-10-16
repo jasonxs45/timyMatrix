@@ -14,6 +14,7 @@ Page({
     } else {
     }
     this.getMemberList()
+    console.log(app.globalData.fingerPrint)
   },
   getMemberList() {
     let _self = this

@@ -1,3 +1,4 @@
 {
-    "navigationBarTitleText": "钥匙管理"
+    "navigationBarTitleText": "钥匙管理",
+    "disableScroll": true
 }

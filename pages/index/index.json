@@ -1,1 +1,4 @@
-{"navigationBarTitleText": "小工矩"}
+{
+  "navigationBarTitleText": "小工矩",
+  "disableScroll":true
+}
